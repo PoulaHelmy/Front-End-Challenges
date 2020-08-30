@@ -18,7 +18,7 @@ if (localStorage.getItem("productsContainer") == null) {
   displayData();
 }
 
-addbtn.onclick = function() {
+addbtn.onclick = function () {
   if (addbtn.innerHTML == "Add Product") {
     addProduct();
     displayData();
@@ -26,7 +26,7 @@ addbtn.onclick = function() {
   } else {
     updateProduct();
     displayData();
-    //clearForm();
+    // clearForm();
   }
 };
 
@@ -35,7 +35,7 @@ function addProduct() {
     name: pname.value,
     price: pprice.value,
     company: pcom.value,
-    desc: pdesc.value
+    desc: pdesc.value,
   };
   productsContainer.push(product);
   localStorage.setItem("productsContainer", JSON.stringify(productsContainer));
@@ -80,12 +80,10 @@ function deleteProduct(index) {
     localStorage.setItem(
       "productsContainer",
       JSON.stringify(productsContainer)
-
     );
     displayData();
     searchProducts(search.value);
     if (search.value == "") searchRow.innerHTML = "";
-  
   }
 }
 
@@ -107,7 +105,7 @@ function setForm(index) {
   addbtn.innerHTML = "Update Product";
   currentIndex = index;
 }
-search.onkeyup = function() {
+search.onkeyup = function () {
   searchProducts(search.value);
   if (search.value == "") searchRow.innerHTML = "";
 };
@@ -129,7 +127,7 @@ function searchProducts(term) {
   }
   searchRow.innerHTML = cols;
 }
-clearall.onclick = function() {
+clearall.onclick = function () {
   if (localStorage.getItem("productsContainer") != null)
     localStorage.clear("productsContainer");
   rowid.innerHTML = "";
