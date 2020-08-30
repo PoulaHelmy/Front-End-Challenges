@@ -1,0 +1,454 @@
+@charset "utf-8";
+body
+{
+    margin:0;
+    padding:0;
+    font-family: monospace;
+}
+
+
+.navbar
+{
+    width: 100%;
+    height: 50px;
+    background: #360836;
+    
+}
+.navbar ul
+{
+    list-style: none;
+    text-align: center;
+    line-height: 50px;
+    
+}
+.navbar ul li
+{
+    display: inline-block;
+}
+.navbar ul li a
+{
+    color: #ff0048;
+    text-decoration: none;
+    margin-left:15px; 
+    font-size: 20px;
+}
+.navbar ul li a.active
+{
+    color: aliceblue;
+}
+
+
+
+
+.web
+{
+    width: 100%;
+    height: 575px;
+    background: url(../images/cover.png) ;
+    background-size:cover ;
+    text-align: center;
+    position: relative;
+}
+.web .folk 
+{
+    margin-bottom: 80px;
+        padding-top: 50px;
+
+}
+
+.web .folk h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.web .folk p
+{
+    letter-spacing: 10px;
+    font-size: 25px;
+    color: #fff;
+}
+
+
+.web .dream p
+{
+        color: #fff;
+        font-size: 25px;
+}
+
+.web .work
+{
+    position: absolute;
+    bottom: 0;
+    color:#fff;
+    font-size: 20px;
+    left: 40%;
+    background:#ff0048;
+    padding: 15px;
+    width: 250px;
+}
+.web .work:after
+{
+    content: "";
+    border-top: 20px solid #ff0048;
+    border-right:20px solid transparent;
+    border-left:20px solid transparent;
+    position: relative;
+    top: 58px;
+    left:-82px;
+    
+}
+
+
+
+.imag
+{
+    width: 100%;
+    
+}
+
+.imag .img
+{
+    width: 25%;
+    height: 252px;
+    float: left;
+    background: url(../images/image_1.jpg);
+}
+
+.imag .img .over
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+}
+.imag .img:hover .over
+{
+        opacity: 1;
+
+    
+}
+
+.imag .i_1
+{
+    background: url(../images/image_2.jpg);
+}
+.imag .i_2
+{
+    background: url(../images/image_3.jpg);
+}
+.imag .i_3
+{
+    background: url(../images/image_4.jpg);
+}
+.imag .i_4
+{
+    background: url(../images/image_5.jpg);
+}
+.imag .i_5
+{
+    background: url(../images/image_6.jpg);
+}.imag .i_6
+{
+    background: url(../images/image_7.jpg);
+}.imag .i_7
+{
+    background: url(../images/image_8.jpg);
+}.imag .i_8
+{
+    background: url(../images/image_9.jpg);
+}.imag .i_9
+{
+    background: url(../images/image_10.jpg);
+}.imag .i_10
+{
+    background: url(../images/image_11.jpg);
+}.imag .i_11
+{
+    background: url(../images/image_12.jpg);
+}
+
+.clear
+{
+    clear: both;
+}
+
+
+.meet
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    background: #f5f5f5;
+    
+}
+.meet .hed
+{
+    position: absolute;
+    top:0;
+    background: #ff0048;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.meet .hed:after
+{
+    content: "";
+    border-top: 20px solid #ff0048;
+    border-right:20px solid transparent;
+    border-left:20px solid transparent;
+    position: relative;
+    top: 58px;
+    left:-82px;
+    
+}
+
+.meet h2
+{
+    margin: 0;
+    padding-top:8%;
+    color: #ff0048;
+    font-size: 40px;
+}
+.meet .meet_image
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+.meet .meet_image h1
+{
+        color: #ff0048;
+    font-size: 28px;
+
+    letter-spacing: 5px;
+}
+.meet .meet_image p
+{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.meet button
+{
+    width: 150px;
+    background: #000;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.end
+{
+    width: 100%;
+    height: 810px;
+    background: url(../images/Cover_2.jpg);
+    text-align: center;
+    background-size: cover;
+    padding-top: 7%;
+    
+}
+.end .content
+{
+    width: 400px;
+display: inline-block;
+    color: #fff;
+    margin-top: 8%;
+    font-size: 25px;
+
+
+}
+
+.end .content h2
+{
+  margin: 0;
+    padding: 0;
+}
+
+.end button
+{
+    margin-top: 8%;
+    width: 150px;
+    background: #fff;
+    border: 0;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.end .bbb
+{
+  text-align: center;
+        padding-top: 20px;
+
+}
+.end .bbb span
+{
+width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.end .bbb span:hover
+{
+    background: #ff0048;
+}
+
+.footer
+{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background: #dddddd;
+    line-height: 80px;
+    font-size: 25px;
+  
+}
+
+
+
+/*-----------------------------------*/
+.contact
+{
+    width: 100%;
+    height: 600px;
+    background: url(../images/coverPage2.PNG);
+    background-size: cover;
+    text-align: center;
+    padding-top: 5%;
+    
+}
+
+
+.contact h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-style: italic;
+    
+}
+.contact p
+{
+    font-size: 25px;
+}
+.contact .form
+{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+     
+}
+.contact .form h2
+{
+    color: #ff0048;
+}
+
+
+.contact .form input[type=text],textarea
+{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    border: 0;
+    outline: 0;
+    background: #ff0048;
+    border-radius:10px; 
+}
+    
+textarea
+{
+  height: 200px;  
+}
+.contact .form input[type=submit]
+{
+    background: #fff;
+     border: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+
+.become
+{
+    width: 100%;
+    height: 350px;
+    background: f5f5f5;
+    text-align: center;
+    padding-top: 2%;
+    
+    
+}
+.become h2
+{
+    margin: 0;
+    padding: 0;
+    color:#df1a5a;
+    font-size: 35px;
+}
+
+
+.become p
+{
+    font-size: 20px;
+}
+
+/*-----------------------------------*/
+.contact .cover
+{
+    width: 900px;
+    height: 400px;
+    background: #fff;
+    margin: auto;
+    padding-top: 5%;
+}
+.contact .cover .left
+{
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+    height: 252px;
+}
+.contact .cover .left img
+{
+    
+    width: 100%;
+}
+
+.contact .cover .right
+{
+    width:45%;
+    float: right;
+    background: #eee;
+    margin-right: 5%;
+    height: 260px;
+    padding-top: 5%;
+}
+.contact .cover .right button
+{
+    background: #000;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
