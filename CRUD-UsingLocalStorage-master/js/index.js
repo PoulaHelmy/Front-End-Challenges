@@ -26,16 +26,16 @@ addbtn.onclick = function() {
   } else {
     updateProduct();
     displayData();
-    //clearForm();
+    // clearForm();
   }
 };
 
 function addProduct() {
   var product = {
-    name: pname.value,
-    price: pprice.value,
-    company: pcom.value,
-    desc: pdesc.value
+    name : pname.value,
+    price : pprice.value,
+    company : pcom.value,
+    desc : pdesc.value
   };
   productsContainer.push(product);
   localStorage.setItem("productsContainer", JSON.stringify(productsContainer));
@@ -47,14 +47,17 @@ function displayData() {
     if (productsContainer.length == 0) {
       break;
     } else {
-      txt += `<div class="col-lg-3 col-md-2 py-1 m-2 text-center border border-primary rounded">
+      txt +=
+          `<div class="col-lg-3 col-md-2 py-1 m-2 text-center border border-primary rounded">
          <div class="product">
            <h3 class="">${productsContainer[i].name}</h3>
            <h4>${productsContainer[i].price}</h4>
            <p>${productsContainer[i].company}</p>
            <p>${productsContainer[i].desc}</p>
-           <button class="btn btn-danger" id="Delete" onclick="deleteProduct(${i})">Delete</button>
-           <button class="btn btn-primary" id="Update"onclick="setForm(${i})">Update</button>
+           <button class="btn btn-danger" id="Delete" onclick="deleteProduct(${
+              i})">Delete</button>
+           <button class="btn btn-primary" id="Update"onclick="setForm(${
+              i})">Update</button>
         </div>
         </div>`;
       rowid.innerHTML = txt;
@@ -64,28 +67,25 @@ function displayData() {
 
 function clearForm() {
   var inputs = document.getElementsByClassName("form-control");
-  for (let i = 0; i < inputs.length; i++) inputs[i].value = "";
+  for (let i = 0; i < inputs.length; i++)
+    inputs[i].value = "";
 }
 
 function deleteProduct(index) {
   if (productsContainer.length == 1 || productsContainer.length == 0) {
     productsContainer.splice(0, 1);
-    localStorage.setItem(
-      "productsContainer",
-      JSON.stringify(productsContainer)
-    );
+    localStorage.setItem("productsContainer",
+                         JSON.stringify(productsContainer));
     rowid.innerHTML = "";
   } else {
     productsContainer.splice(index, 1);
-    localStorage.setItem(
-      "productsContainer",
-      JSON.stringify(productsContainer)
+    localStorage.setItem("productsContainer", JSON.stringify(productsContainer)
 
     );
     displayData();
     searchProducts(search.value);
-    if (search.value == "") searchRow.innerHTML = "";
-  
+    if (search.value == "")
+      searchRow.innerHTML = "";
   }
 }
 
@@ -97,7 +97,8 @@ function updateProduct() {
   addbtn.innerHTML = "Add Product";
   localStorage.setItem("productsContainer", JSON.stringify(productsContainer));
   searchProducts(search.value);
-  if (search.value == "") searchRow.innerHTML = "";
+  if (search.value == "")
+    searchRow.innerHTML = "";
 }
 function setForm(index) {
   pname.value = productsContainer[index].name;
@@ -109,20 +110,24 @@ function setForm(index) {
 }
 search.onkeyup = function() {
   searchProducts(search.value);
-  if (search.value == "") searchRow.innerHTML = "";
+  if (search.value == "")
+    searchRow.innerHTML = "";
 };
 function searchProducts(term) {
   var cols = "";
   for (var i = 0; i < productsContainer.length; i++) {
     if (productsContainer[i].name.includes(term)) {
-      cols += `<div class="col-lg-3 col-md-2 py-1 m-2 text-center border border-warning  rounded">
+      cols +=
+          `<div class="col-lg-3 col-md-2 py-1 m-2 text-center border border-warning  rounded">
             <div class="product">
             <h3 class="">${productsContainer[i].name}</h3>
             <h4>${productsContainer[i].price}</h4>
             <p>${productsContainer[i].company}</p>
             <p>${productsContainer[i].desc}</p>
-            <button class="btn btn-danger" id="Delete" onclick="deleteProduct(${i})">Delete</button>
-            <button class="btn btn-primary" id="Update"onclick="setForm(${i})">Update</button>
+            <button class="btn btn-danger" id="Delete" onclick="deleteProduct(${
+              i})">Delete</button>
+            <button class="btn btn-primary" id="Update"onclick="setForm(${
+              i})">Update</button>
              </div>
             </div>`;
     }
