@@ -8,7 +8,9 @@ function nothoverr() {
 function show() {
   document.getElementById("btt2").style.visibility = "visible";
 }
-function hide() { document.getElementById("btt2").style.visibility = "hidden"; }
+function hide() {
+  document.getElementById("btt2").style.visibility = "hidden";
+}
 var n = 0;
 function hoverd() {
   n = n + 1;
